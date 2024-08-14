@@ -1,11 +1,12 @@
-import React from 'react'
+import React, { useID } from 'react'
 
-const input = React.forwardRef(function Input({
+const Input = React.forwardRef(function Input({
     label,
     type = "text",
     className = "",
     ...props
 }, ref) {
+    const id = useID()
     return (
         <div className='w-full'>
             {label && <label
